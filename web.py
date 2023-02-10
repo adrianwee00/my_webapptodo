@@ -8,6 +8,7 @@ def add_todo():
     todo = st.session_state["new_todo"] + "\n"
     todos.append(todo)
     functions.file_write(todos)
+    st.session_state["new_todo"] = ""
 
 
 st.title("My todo App")
